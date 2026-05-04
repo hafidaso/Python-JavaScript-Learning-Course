@@ -9,7 +9,7 @@
 - exercise_1.js
 - exercise_2.js
 - exercise_3.js
-- exercise_4.js — Not completed; I didn't know these exercises
-- exercise_5.js — Not completed; I didn't know these exercises
+- exercise_4.js — Not completed
+- exercise_5.js 
 
 A concise collection of daily exercises completed during a 2-week Python and JavaScript course at ABA Fusion. Each day's exercises are stored in separate files for easy review and practice.
