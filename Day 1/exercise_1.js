@@ -1,3 +1,10 @@
+/*
+** EPITECH PROJECT, 2026
+** Python-JavaScript-Learning-Course
+** File description: Exercise 1 - Personal Introduction with Variables
+** Author: hafida belayd
+*/
+
 // Exercise 1 - Déclarer nom, âge, ville et domaine souhaité, puis afficher une phrase avec console.log.
 let nom = "Sara";
 let age = 20;

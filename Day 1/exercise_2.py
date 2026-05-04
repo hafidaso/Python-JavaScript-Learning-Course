@@ -1,3 +1,10 @@
+##
+## EPITECH PROJECT, 2026
+## Python-JavaScript-Learning-Course
+## File description: Exercise 2 - Loops and Sum Calculation
+## Author: hafida belayd
+##
+
 # Exercise 2 - Demander une note sur 20 puis afficher Excellent, Bien, Assez bien, Passable ou Non validé selon la valeur.
 
 somme = 0
