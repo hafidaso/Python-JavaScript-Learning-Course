@@ -1,4 +1,4 @@
-# Exercise 3
+# Exercise 3 - Afficher les nombres de 1 à 10, puis calculer et afficher leur somme.
 
 students = ['Ali', 'Sara', 'Youssef']
 
