@@ -1,5 +1,4 @@
-// Exercise 1 - Créer un programme qui déclare le nom, l’âge, la ville et la spécialité souhaitée, puis affiche une phrase personnalisée.
-
+// Exercise 1 - Déclarer nom, âge, ville et domaine souhaité, puis afficher une phrase avec console.log.
 let nom = "Sara";
 let age = 20;
 let ville = "Casablanca";
