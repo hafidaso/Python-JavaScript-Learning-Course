@@ -1,4 +1,4 @@
-# Exercise 2
+# Exercise 2 - Demander une note sur 20 puis afficher Excellent, Bien, Assez bien, Passable ou Non validé selon la valeur.
 
 somme = 0
 
