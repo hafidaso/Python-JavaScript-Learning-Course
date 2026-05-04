@@ -1,4 +1,4 @@
-// Exercise 3
+// Exercise 3 - Créer un tableau contenant les noms de 5 étudiants et afficher Bienvenue + nom pour chaque élément.
 
 let etudiants = ['Ali', 'Sara', 'Youssef', 'Imane', 'Nabil'];
 
