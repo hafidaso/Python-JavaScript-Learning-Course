@@ -1,4 +1,4 @@
-# Exercise 1
+# Exercise 1 - Créer un programme qui déclare le nom, l’âge, la ville et la spécialité souhaitée, puis affiche une phrase personnalisée.
 
 nom = "Sara"
 age = 20
