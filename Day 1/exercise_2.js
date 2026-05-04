@@ -1,4 +1,4 @@
-// Exercise 2
+// Exercise 2 - Créer une variable score puis afficher Débutant, Intermédiaire ou Avancé selon la valeur.
 
 let score = 75;
 
