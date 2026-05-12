@@ -1,3 +1,5 @@
+// Exercice 1 : Création et manipulation d’un objet étudiant
+
 // Créer un objet étudiant
 let etudiant = {
     nom: "Hafida",
@@ -22,3 +24,27 @@ etudiant.ville = "Salé";
 console.log("Objet final :", etudiant);
 
 
+// Exercice 2 : Calcul de la moyenne d’un étudiant
+
+// Créer l'objet étudiant
+let etudiant = {
+    nom: "Hafida",
+    notes: [12, 15, 18, 10],
+
+
+    calculerMoyenne: function () {
+
+        let somme = 0;
+
+
+        for (let i = 0; i < this.notes.length; i++) {
+            somme += this.notes[i];
+        }
+
+        // Calcul de la moyenne
+        return somme / this.notes.length;
+    }
+};
+
+// Afficher la moyenne
+console.log("Moyenne :", etudiant.calculerMoyenne());
