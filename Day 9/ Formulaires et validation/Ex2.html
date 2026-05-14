@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire Étudiant</title>
+</head>
+<body>
+
+  <h1>Formulaire Étudiant</h1>
+
+  <form id="formEtudiant">
+    <input type="text" id="nom" placeholder="Nom de l'étudiant">
+    <br><br>
+
+    <input type="text" id="moyenne" placeholder="Moyenne">
+    <br><br>
+
+    <button type="submit">Afficher</button>
+  </form>
+
+  <p id="message"></p>
+
+  <div id="resultat"></div>
+
+  <script>
+    const formEtudiant = document.getElementById("formEtudiant");
+    const inputNom = document.getElementById("nom");
+    const inputMoyenne = document.getElementById("moyenne");
+    const message = document.getElementById("message");
+    const resultat = document.getElementById("resultat");
+
+    formEtudiant.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const nom = inputNom.value.trim();
+      const moyenneTexte = inputMoyenne.value.trim();
+      const moyenne = Number(moyenneTexte);
+
+      if (nom === "") {
+        message.textContent = "Erreur : le nom est obligatoire.";
+        message.style.color = "red";
+        resultat.innerHTML = "";
+        return;
+      }
+
+      if (moyenneTexte === "") {
+        message.textContent = "Erreur : la moyenne est obligatoire.";
+        message.style.color = "red";
+        resultat.innerHTML = "";
+        return;
+      }
+
+      if (isNaN(moyenne)) {
+        message.textContent = "Erreur : la moyenne doit être un nombre.";
+        message.style.color = "red";
+        resultat.innerHTML = "";
+        return;
+      }
+      // || (OR)
+
+      if (moyenne < 0 || moyenne > 20) {
+        message.textContent = "Erreur : la moyenne doit être entre 0 et 20.";
+        message.style.color = "red";
+        resultat.innerHTML = "";
+        return;
+      }
+
+      const statut = moyenne >= 10 ? "Admis" : "Non admis";
+
+      message.textContent = "Étudiant valide.";
+      message.style.color = "green";
+
+      resultat.innerHTML = `
+        <h2>${nom}</h2>
+        <p>Moyenne : ${moyenne}/20</p>
+        <p>Statut : ${statut}</p>
+      `;
+    });
+  </script>
+
+</body>
+</html>

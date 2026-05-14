@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire Débutant</title>
+</head>
+<body>
+
+  <h1>Formulaire Débutant</h1>
+
+  <form id="formNom">
+    <input type="text" id="nom" placeholder="Écrivez votre nom">
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <p id="message"></p>
+
+  <script>
+    const formNom = document.getElementById("formNom");
+    const inputNom = document.getElementById("nom");
+    const message = document.getElementById("message");
+
+    formNom.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const nom = inputNom.value.trim();
+
+      if (nom === "") {
+        message.textContent = "Erreur : veuillez écrire votre nom.";
+        message.style.color = "red";
+      } else {
+        message.textContent = `Bonjour ${nom}`;
+        message.style.color = "green";
+      }
+    });
+  </script>
+
+</body>
+</html>

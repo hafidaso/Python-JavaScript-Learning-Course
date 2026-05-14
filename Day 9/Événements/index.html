@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Événement Débutant</title>
+</head>
+<body>
+
+  <h1>Exercice Événement Débutant</h1>
+
+  <button id="btn">Cliquez ici</button>
+
+  <p id="message"></p>
+
+  <script>
+    const bouton = document.getElementById("btn");
+    const message = document.getElementById("message");
+
+    let compteur = 0;
+
+    bouton.addEventListener("click", function() {
+      compteur++;
+
+      message.textContent = 
+        "Bouton cliqué avec succès ! Nombre de clics : " + compteur;
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Événement Avancé</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input {
+      display: block;
+      margin-bottom: 10px;
+      padding: 8px;
+      width: 250px;
+    }
+
+    button {
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+
+    .card {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 300px;
+    }
+
+    .admis {
+      background-color: #d4edda;
+    }
+
+    .non-admis {
+      background-color: #f8d7da;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ajouter un étudiant</h1>
+
+  <input type="text" id="nom" placeholder="Nom de l'étudiant">
+
+  <input type="number" id="moyenne" placeholder="Moyenne">
+
+  <button id="btnAjouter">Ajouter</button>
+
+  <div id="zoneAffichage"></div>
+
+  <script>
+    const inputNom = document.getElementById("nom");
+    const inputMoyenne = document.getElementById("moyenne");
+    const btnAjouter = document.getElementById("btnAjouter");
+    const zoneAffichage = document.getElementById("zoneAffichage");
+
+    btnAjouter.addEventListener("click", function() {
+      const nom = inputNom.value;
+      const moyenne = Number(inputMoyenne.value);
+
+      const etudiant = {
+        nom: nom,
+        moyenne: moyenne
+      };
+
+      const card = document.createElement("div");
+
+      card.classList.add("card");
+
+      if (etudiant.moyenne >= 10) {
+        card.classList.add("admis");
+      } else {
+        card.classList.add("non-admis");
+      }
+
+      card.innerHTML = `
+        <h2>${etudiant.nom}</h2>
+        <p>Moyenne : ${etudiant.moyenne}/20</p>
+        <p>Statut : ${etudiant.moyenne >= 10 ? "Admis" : "Non admis"}</p>
+      `;
+
+      zoneAffichage.appendChild(card);
+    });
+  </script>
+
+</body>
+</html>

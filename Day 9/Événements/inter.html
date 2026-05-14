@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Événement Intermédiaire</title>
+</head>
+<body>
+
+  <h1>Exercice Événement Intermédiaire</h1>
+
+  <input type="text" id="nom" placeholder="Écrivez votre nom">
+
+  <p id="resultat">Veuillez écrire votre nom</p>
+
+  <p id="compteur"></p>
+
+  <script>
+    const inputNom = document.getElementById("nom");
+    const resultat = document.getElementById("resultat");
+    const compteur = document.getElementById("compteur");
+
+    inputNom.addEventListener("input", function(event) {
+      // The text typed by the user
+      const nom = event.target.value;
+
+      // We remove spaces at the beginning and at the end
+      const nomNettoye = nom.trim();
+
+      // We display the number of characters
+      compteur.textContent = "Nombre de caractères : " + nom.length;
+
+      if (nomNettoye === "") {
+        resultat.textContent = "Veuillez écrire votre nom";
+      } else {
+        resultat.textContent = `Bonjour ${nomNettoye}`;
+      }
+    });
+  </script>
+
+</body>
+</html>
